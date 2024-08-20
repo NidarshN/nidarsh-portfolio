@@ -1,6 +1,6 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
@@ -46,7 +46,8 @@ const MobileNav = () => {
                 <nav className="flex flex-col justify-center items-center gap-8">
                     {links.map((link, index) => {
                         return (
-                            <Link
+                            <SheetClose asChild key={index}>
+                                <Link
                                 href={link.path}
                                 key={index}
                                 className={`${
@@ -56,6 +57,8 @@ const MobileNav = () => {
                             >
                                 {link.name}
                             </Link>
+                            </SheetClose>
+                            
                         );
                     })}
                 </nav>
