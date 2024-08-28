@@ -3,38 +3,9 @@
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { services } from "@/lib/utils";
+import { GrTechnology } from "react-icons/gr";
 
-const services = [
-    {
-        num: "01",
-        title: "Java Full Stack",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim, delectus eos maxime modi consequuntur natus ullam eum repellat rem sit eaque praesentium doloribus incidunt voluptates obcaecati quaerat debitis similique!",
-
-        href: "",
-    },
-    {
-        num: "02",
-        title: "Machine Learning",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim, delectus eos maxime modi consequuntur natus ullam eum repellat rem sit eaque praesentium doloribus incidunt voluptates obcaecati quaerat debitis similique!",
-        href: "",
-    },
-    {
-        num: "03",
-        title: "Python Web",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim, delectus eos maxime modi consequuntur natus ullam eum repellat rem sit eaque praesentium doloribus incidunt voluptates obcaecati quaerat debitis similique!",
-        href: "",
-    },
-    {
-        num: "04",
-        title: "Python Scripting",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim, delectus eos maxime modi consequuntur natus ullam eum repellat rem sit eaque praesentium doloribus incidunt voluptates obcaecati quaerat debitis similique!",
-        href: "",
-    },
-];
 const Services = () => {
     return (
         <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -57,7 +28,7 @@ const Services = () => {
                                 <div className="w-full flex justify-between items-center">
                                     <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
                                     <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
-                                        <BsArrowDownRight className="text-primary text-3xl"/>
+                                        <GrTechnology className="text-primary text-3xl"/>
                                     </Link>
                                 </div>
                                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>

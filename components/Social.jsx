@@ -1,28 +1,36 @@
 import Link from "next/link";
 
-import {FaGithub, FaLinkedin, FaHackerrank, FaInstagram} from "react-icons/fa";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-const socials = [
-    {
-        icon: <FaGithub/>, path: ''
-    },
-    {
-        icon: <FaLinkedin/>, path: ''
-    },
-    {
-        icon: <FaHackerrank/>, path: ''
-    },
-    {
-        icon: <FaInstagram/>, path: ''
-    },
-]
-const Social = ({containerStyles, iconStyles}) => {
-    return(
+
+const Social = ({ containerStyles, iconStyles, data }) => {
+    return (
         <div className={containerStyles}>
-            {socials.map((item, index)=>{
-                return <Link key={index} href={item.path} className={iconStyles}>
-                    {item.icon}
-                </Link>
+            {data.map((item, index) => {
+                return (
+                    <TooltipProvider key={index}>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link
+                                    key={index}
+                                    href={item.hasOwnProperty("path")? item.path: ""}
+                                    target={item.hasOwnProperty("path")? "_blank": ""}
+                                    className={iconStyles}
+                                >
+                                    {item.icon}
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>{item.name}</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                );
             })}
         </div>
     );

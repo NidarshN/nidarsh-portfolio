@@ -8,8 +8,8 @@ const stats = [
         text: "Years of Experience",
     },
     {
-        num: 26,
-        text: "Projects Completed",
+        num: 23,
+        text: "Certifications",
     },
     {
         num: 8,
@@ -32,12 +32,14 @@ const Stats = () => {
                                 className="flex-1 flex gap-2 items-center justify-center xl:justify-start"
                                 key={index}
                             >
+                                <span className="flex">
                                 <CountUp
                                     end={item.num}
                                     duration={5}
                                     delay={2}
                                     className="text-4xl xl:text-6xl font-extrabold"
                                 />
+                                <p className="text-4xl xl:text-6xl font-extrabold">{(item.text == "Years of Experience" || item.text === "Code Commits")? "+" : ""}</p></span>
                                 <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-white/80`}>{item.text}</p>
                             </div>
                         );

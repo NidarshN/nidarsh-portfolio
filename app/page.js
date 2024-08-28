@@ -5,9 +5,16 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Typewriter from "typewriter-effect";
-
+import { saveAs } from "file-saver";
+import { socials } from "@/lib/utils";
 
 const Home = () => {
+
+    const downloadResume = () => {
+        saveAs(
+            process.env.NEXT_PUBLIC_RESUME_LINK,
+        );
+    };
     return (
         <section className="h-full">
             <div className="container mx-auto h-full">
@@ -16,7 +23,7 @@ const Home = () => {
                         <h1 className="h1 mb-6">
                             {`Hello I'm `}
                             <br />
-                            <span className="text-accent">
+                            <span className="name-font text-accent">
                                 Nidarsh Nithyananda
                             </span>
                         </h1>
@@ -31,15 +38,14 @@ const Home = () => {
                         </span>
 
                         <p className="max-w-[500px] mt-5 mb-9 text-white/80">
-                            I excel at crafting elegant digital experiences and
-                            I am proficient in various programming languages and
-                            technologies
+                        With hands-on experience across 8+ technologies, I enjoy creating practical and innovative software solutions that drive efficiency and enhance user experiences. Explore my work to see how I combine my technical skills and problem-solving abilities to deliver impactful projects.
                         </p>
                         <div className="flex flex-col xl:flex-row items-center gap-8">
                             <Button
                                 variant="outline"
                                 size="lg"
                                 className="uppercase flex items-center gap-2"
+                                onClick={downloadResume}
                             >
                                 <span>Download CV</span>
                                 <FiDownload className="text-xl" />
@@ -48,6 +54,7 @@ const Home = () => {
                                 <Social
                                     containerStyles="flex gap-6"
                                     iconStyles="w-9 h-9 border border-accent rounded-full flex flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                                    data={socials}
                                 />
                             </div>
                         </div>

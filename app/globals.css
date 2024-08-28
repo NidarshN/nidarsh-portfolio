@@ -25,5 +25,13 @@
     .text-outline-hover {
         -webkit-text-stroke: 1px #0bcbe0;
     }
+
+    .name-font {
+        font-family: var(---font-montserrat);
+    }
+
+    a[aria-disabled="true"]{
+        display: none;
+    }
 }
 

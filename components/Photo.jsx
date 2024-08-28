@@ -16,12 +16,14 @@ const Photo = () => {
                 className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
                     <Image
                         src="/assets/nidphoto.png"
-                        priority
                         quality={100}
                         fill
                         alt=""
                         aria-describedby=""
                         className="-scale-x-100 object-contain mt-2 ml-2 xl:mt-5 xl:ml-5"
+                        loading="eager" 
+                        priority={true}
+                        sizes="(min-width: 298px) (min-height:298px)"
                     />
                 </motion.div>
 
