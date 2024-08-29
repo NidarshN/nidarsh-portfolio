@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Portfolio Website
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Personal portfolio website developed to showcase my projects, skills, and experience in software development. The website is built using **Next.js** and **React.js** for a modern, responsive user interface. It leverages **Tailwind CSS** for styling , **Framer Motion** for animation and the **Shadcn library** to enhance the UI with sleek components.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Responsive Design:** The website is fully responsive and adapts to various screen sizes, ensuring a great user experience on both mobile and desktop devices.
+- **Dynamic Routing:** Utilizes Next.js dynamic routing to create a seamless browsing experience.
+- **Optimized Performance:** The website is optimized for performance, ensuring fast load times and smooth interactions.
+- **Mail Support:** Includes functionality for mail support, allowing visitors to contact me directly through the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Next.js:** A React framework for building fast, server-rendered React applications.
+- **React.js:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Framer Motion:** An animation library for amazing animations and interactions for React.
+- **Shadcn Library:** A component library to enhance the UI with pre-built, customizable components.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/NidarshN/nidarsh-portfolio
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    cd nidarsh-portfolio
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser and go to `http://localhost:3000` to view the website.
+
+## Deployment
+
+This project can be deployed to various platforms like Vercel, Netlify, or any hosting service that supports Next.js applications.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Reference
+
+This tutorial is based from Cristian Mihai's youtube tutorials - [Cristian Mihai](https://www.youtube.com/watch?v=dImgZ_AH7uA)

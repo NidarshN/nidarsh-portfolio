@@ -7,6 +7,9 @@ import Stats from "@/components/Stats";
 import Typewriter from "typewriter-effect";
 import { saveAs } from "file-saver";
 import { socials } from "@/lib/utils";
+import Services from "./services/page";
+import Resume from "./resume/page";
+import Work from "./work/page";
 
 const Home = () => {
 
@@ -53,7 +56,7 @@ const Home = () => {
                             <div className="mb-8 xl:mb-0">
                                 <Social
                                     containerStyles="flex gap-6"
-                                    iconStyles="w-9 h-9 border border-accent rounded-full flex flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                                    iconStyles="w-10 h-10 border border-accent rounded-full flex flex justify-center items-center text-accent text-2xl hover:bg-accent hover:text-primary hover:transition-all duration-500"
                                     data={socials}
                                 />
                             </div>

@@ -1,6 +1,14 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import {
+    Sheet,
+    SheetContent,
+    SheetTrigger,
+    SheetClose,
+    SheetTitle,
+    SheetHeader,
+    SheetDescription,
+} from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
@@ -36,6 +44,11 @@ const MobileNav = () => {
                 <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
             <SheetContent className="flex flex-col">
+                <SheetHeader className="text-white hidden">
+                    <SheetTitle>Menu</SheetTitle>
+                    <SheetDescription>Options</SheetDescription>
+                </SheetHeader>
+
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/">
                         <h1 className="text-4xl font-semibold">
@@ -48,17 +61,16 @@ const MobileNav = () => {
                         return (
                             <SheetClose asChild key={index}>
                                 <Link
-                                href={link.path}
-                                key={index}
-                                className={`${
-                                    link.path === pathname &&
-                                    "text-accent border-b-2 border-accent"
-                                } capitalize font-medium hover:text-accent transition-all`}
-                            >
-                                {link.name}
-                            </Link>
+                                    href={link.path}
+                                    key={index}
+                                    className={`${
+                                        link.path === pathname &&
+                                        "text-accent border-b-2 border-accent"
+                                    } capitalize font-medium hover:text-accent transition-all`}
+                                >
+                                    {link.name}
+                                </Link>
                             </SheetClose>
-                            
                         );
                     })}
                 </nav>

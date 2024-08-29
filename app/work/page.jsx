@@ -18,6 +18,7 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 import { projects } from "@/lib/utils";
 import Social from "@/components/Social";
+import { Separator } from "@/components/ui/separator";
 
 const Work = () => {
     const [project, setProject] = useState(projects[0]);
@@ -40,15 +41,15 @@ const Work = () => {
                 <div className="flex flex-col xl:flex-row">
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px] h-[50%]">
-                            <div className="text-6xl leading-none font-extrabold text-transparent text-outline">
+                            <div className="text-6xl leading-none flex gap-3 font-extrabold text-transparent text-outline">
                                 {project.num}
+                                <Separator orientation="vertical" className="w-[2px] h-[60px] text-accent"/>
                             </div>
                             <h2 className="text-4xl text-accent font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize">
                                 {project.title}
                             </h2>
                             <div className="flex gap-1">
-                                {" "}
-                                <p className="font-semibold">Category:</p>{" "}
+                                <p className="font-semibold">Category:</p>
                                 {project.category}
                             </div>
                             <p className="text-white/60 xl:mr-5">
@@ -106,7 +107,7 @@ const Work = () => {
                                     <SwiperSlide key={index} className="w-full">
                                         <div className="h-[300px] xl:h-[460px] relative group flex justify-center items-center bg-transparent">
                                             <div className="absolute top-0 bottom-0 w-full h-full z-10"></div>
-                                            <div className="relative w-full h-full border border-transparent">
+                                            <div className="relative w-full h-full border border-accent/20 shadow-xl">
                                                 <Image
                                                     src={project.image}
                                                     alt=""

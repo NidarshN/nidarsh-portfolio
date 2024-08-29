@@ -17,7 +17,7 @@ const Photo = () => {
                     <Image
                         src="/assets/nidphoto.png"
                         quality={100}
-                        fill
+                        fill={true}
                         alt=""
                         aria-describedby=""
                         className="-scale-x-100 object-contain mt-2 ml-2 xl:mt-5 xl:ml-5"
