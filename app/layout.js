@@ -21,6 +21,7 @@ const montserrat_alt = Montserrat_Alternates({
 export const metadata = {
     title: "Nidarsh N",
     description: "Portfolio",
+    author: "Nidarsh N"
 };
 
 export default function RootLayout({ children }) {

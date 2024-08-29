@@ -7,9 +7,6 @@ import Stats from "@/components/Stats";
 import Typewriter from "typewriter-effect";
 import { saveAs } from "file-saver";
 import { socials } from "@/lib/utils";
-import Services from "./services/page";
-import Resume from "./resume/page";
-import Work from "./work/page";
 
 const Home = () => {
 

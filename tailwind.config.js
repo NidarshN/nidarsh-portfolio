@@ -20,7 +20,6 @@ module.exports = {
       },
     },
     fontFamily: {
-      // primary: "var(--font-jetbrainsMono)",
       primary: ["var(---font-montserrat-alternates)"],
       secondary: ["var(---font-montserrat)"],
     },
