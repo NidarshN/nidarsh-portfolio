@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useForm, ValidationError } from "@formspree/react";
 import { info } from "@/lib/utils";
-
+import "react-phone-number-input/style.css";
+import React from "react";
+import { PhoneInput } from "@/components/PhoneInput";
 
 const Contact = () => {
     const [state, handleSubmit, reset] = useForm("mjkblwyo");
@@ -18,10 +20,38 @@ const Contact = () => {
                 <div className="container mx-auto pt-10 xl:w-[50%]">
                     <div className="flex flex-col justify-center items-center h-[500px] bg-[#27272c] border border-accent/60 rounded-xl gap-[50px]">
                         <h1 className="text-xl xl:text-3xl font-semibold text-accent">
-                        Thank you for reaching out!
+                            Thank you for reaching out!
                         </h1>
                         <p className="w-[80%]">
-                        Your message has been successfully sent. I will review it and get back to you as soon as possible. In the meantime, feel free to explore the rest of my portfolio or connect with me on <Link className="text-accent font-semibold" href={process.env.NEXT_PUBLIC_LINKEDIN_LINK} target="_blank">LinkedIn</Link>, <Link className="text-accent font-semibold" href={process.env.NEXT_PUBLIC_GITHUB_LINK} target="_blank">GitHub</Link> or check out my photography work on <Link className="text-accent font-semibold" href={process.env.NEXT_PUBLIC_INSTAGRAM_LINK} target="_blank">Instagram</Link>.</p>
+                            Your message has been successfully sent. I will
+                            review it and get back to you as soon as possible.
+                            In the meantime, feel free to explore the rest of my
+                            portfolio or connect with me on{" "}
+                            <Link
+                                className="text-accent font-semibold"
+                                href={process.env.NEXT_PUBLIC_LINKEDIN_LINK}
+                                target="_blank"
+                            >
+                                LinkedIn
+                            </Link>
+                            ,{" "}
+                            <Link
+                                className="text-accent font-semibold"
+                                href={process.env.NEXT_PUBLIC_GITHUB_LINK}
+                                target="_blank"
+                            >
+                                GitHub
+                            </Link>{" "}
+                            or check out my photography work on{" "}
+                            <Link
+                                className="text-accent font-semibold"
+                                href={process.env.NEXT_PUBLIC_INSTAGRAM_LINK}
+                                target="_blank"
+                            >
+                                Instagram
+                            </Link>
+                            .
+                        </p>
                         <Button onClick={reset}>
                             Click to send another mail
                         </Button>
@@ -43,7 +73,7 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     <div className="xl:h-[54%] order-2 xl:order-none">
                         <form
-                            className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+                            className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl border border-accent"
                             onSubmit={handleSubmit}
                             method="POST"
                         >
@@ -66,6 +96,7 @@ const Contact = () => {
                                     name="firstname"
                                     placeholder="Firstname"
                                     required
+                                    className="border border-white/20"
                                 />
                                 <Input
                                     id="lastname"
@@ -73,6 +104,8 @@ const Contact = () => {
                                     name="lastname"
                                     placeholder="Lastname"
                                     required
+                                    className="border border-white/20"
+
                                 />
                                 <Input
                                     id="email"
@@ -80,13 +113,17 @@ const Contact = () => {
                                     name="email"
                                     placeholder="Email Address"
                                     required
+                                    className="border border-white/20"
+
                                 />
                                 <ValidationError
                                     prefix="Email"
                                     field="email"
                                     errors={state.errors}
                                 />
-                                <Input
+
+
+                                <PhoneInput
                                     id="phone"
                                     type="phone"
                                     name="phone"
@@ -94,17 +131,18 @@ const Contact = () => {
                                 />
                             </div>
                             <Input
-                                className=""
+                                className="border border-white/20"
                                 id="emailsubject"
                                 type="emailsubject"
                                 name="emailsubject"
                                 placeholder="Email Subject"
                                 required
+
                             />
                             <Textarea
                                 id="emailbody"
                                 name="emailbody"
-                                className="h-[150px] border"
+                                className="h-[150px] border border-white/20"
                                 placeholder="Type your message here."
                                 required
                             />
