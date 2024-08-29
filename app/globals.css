@@ -30,8 +30,5 @@
         font-family: var(---font-montserrat);
     }
 
-    a[aria-disabled="true"]{
-        display: none;
-    }
 }
 

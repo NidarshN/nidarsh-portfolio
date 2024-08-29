@@ -68,7 +68,7 @@ const Work = () => {
                                 </div>
                             </ul>
                             <div className="flex items-center gap-4">
-                                <Link href={project.live} target="_blank" aria-disabled={project.live=="" ? true : false}>
+                                { project.live != "" && <Link href={project.live} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -79,7 +79,8 @@ const Work = () => {
                                             </TooltipContent>
                                         </Tooltip>
                                     </TooltipProvider>
-                                </Link>
+                                </Link>}
+                                
                                 <Link href={project.github} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
