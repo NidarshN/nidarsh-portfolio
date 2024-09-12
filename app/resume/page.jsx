@@ -78,20 +78,29 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[180px] xl:h-[180px] px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
+                                                    className="bg-[#232329] h-[220px] px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
                                                 >
                                                     <div className="w-full justify-between items-center">
-                                                        <div className="flex flex-col justify-center items-center xl:items-start">
+                                                        <div className="flex flex-col justify-center items-center lg:items-start lg:mb-3">
                                                             <span className="text-accent">
                                                                 {item.duration}
                                                             </span>
-                                                            <h3 className="text-xl w-full min-h-[60px] text-center lg:text-left font-semibold">
+                                                            <h3 className="text-xl w-full min-h-[30px] text-center lg:text-left font-semibold">
                                                                 {item.position}
                                                             </h3>
+                                                            <p className="flex flex-col lg:flex-row lg:w-full lg:justify-between lg:mt-2">
+                                                            <span className="text-center lg:text-left text-white/80">
+                                                                {item.type}
+                                                            </span>
+                                                            <span className="text-center lg:text-left text-white/80">
+                                                            {item.location}
+                                                            </span>
+                                                            </p>
+                                                            
                                                         </div>
 
-                                                        <div className="flex items-center justify-center xl:justify-start gap-3">
-                                                            <p className="text-white/60 xl:h-[60px]">
+                                                        <div className="flex items-center justify-center lg:justify-start gap-3">
+                                                            <p className="text-white/60 lg:h-[60px] lg:text-start">
                                                                 {item.company}
                                                             </p>
                                                         </div>
@@ -121,42 +130,42 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[250px] xl:h-[180px] py-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
+                                                    className="bg-[#232329] h-[250px] lg:h-[180px] py-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
                                                 >
                                                     <span className="text-accent">
                                                         {item.duration}
                                                     </span>
 
-                                                    <div className="xl:flex w-full justify-between">
-                                                        <div className="xl:justify-between xl:pt-0 xl:flex xl:flex-col">
-                                                            <h3 className="text-xl font-semibold max-w-[300px] min-h-[30px] text-center lg:text-left">
+                                                    <div className="lg:flex w-full justify-between">
+                                                        <div className="lg:justify-between lg:pt-0 lg:flex lg:flex-col">
+                                                            <h3 className="text-xl font-semibold text-center lg:text-left">
                                                                 {item.degree}
                                                             </h3>
-                                                            <p className="text-white/80 truncate">
+                                                            <p className="text-white/80 truncate text-center lg:text-left">
                                                                 {item.field}
                                                             </p>
                                                         </div>
 
-                                                        <div className="flex pt-3 justify-between xl:pt-0 xl:flex xl:flex-col">
+                                                        <div className="flex pt-3 justify-around lg:pt-0 lg:flex lg:flex-col">
                                                             <div className="text-center font-semibold">
                                                                 Grade
                                                             </div>
-                                                            <div className="flex flex-row justify-center items-end gap-1">
-                                                                <p className="text-2xl xl:text-3xl font-extrabold text-accent text-outline-transparent">
+                                                            <div className="flex flex-row justify-center lg:justify-start items-end gap-1">
+                                                                <p className="text-2xl lg:text-3xl text-center lg:text-left font-extrabold text-accent text-outline-transparent">
                                                                     {
                                                                         item
                                                                             .grade
                                                                             .score
                                                                     }
                                                                 </p>
-                                                                <p className="text-2xl xl:text-3xl">
+                                                                <p className="text-2xl lg:text-3xl text-center lg:text-left">
                                                                     {item.grade
                                                                         .type ==
                                                                     "grade"
                                                                         ? "/"
                                                                         : ""}
                                                                 </p>
-                                                                <p className="text-xl font-extrabold text-transparent text-outline">
+                                                                <p className="text-xl font-extrabold text-transparent text-outline text-center lg:text-left">
                                                                     {
                                                                         item
                                                                             .grade
@@ -167,9 +176,9 @@ const Resume = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className="flex items-start xl:items-center gap-3 pt-3">
+                                                    <div className="flex items-start lg:items-center gap-3 pt-3">
                                                         <p className="text-white/60 w-full">
-                                                            {item.institution}
+                                                            {item.institution}, {item.location}
                                                         </p>
                                                     </div>
                                                 </li>
@@ -434,20 +443,20 @@ const Resume = () => {
                                 </p>
 
                                 <ScrollArea className="h-[480px]">
-                                    <ul className="grid grid-cols-1 xl:grid-cols-1 gap-y-6 xl:w-[90%] mx-auto xl:mx-0">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-1 gap-y-6 lg:w-[90%] lg:items-center lg:justify-center mx-auto lg:mx-0">
                                         {publications.articles.map(
                                             (item, index) => {
                                                 return (
                                                     <div
                                                         key={index}
-                                                        className="h-[300px] xl:h-[250px] px-4 bg-[#232329] rounded-xl flex group border border-white/20"
+                                                        className="h-[300px] lg:h-[250px] px-4 bg-[#232329] rounded-xl flex group border border-white/20 lg:justify-between"
                                                     >
                                                         <div className="flex flex-col justify-center items-center mx-3">
-                                                            <li className=" flex flex-col justify-center  xl:justify-start gap-4 ">
+                                                            <li className=" flex flex-col justify-center  lg:justify-start gap-4 ">
                                                                 <span className="text-accent text-xl font-semibold">
                                                                     {item.name}
                                                                 </span>
-                                                                <span className="flex flex-col">
+                                                                <span className="flex flex-col lg:items-start">
                                                                     <p>
                                                                         {
                                                                             item.book

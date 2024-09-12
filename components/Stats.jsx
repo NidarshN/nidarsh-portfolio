@@ -1,25 +1,8 @@
 "use client";
 
+import { stats } from "@/lib/utils";
 import CountUp from "react-countup";
 
-const stats = [
-    {
-        num: 3,
-        text: "Years of Experience",
-    },
-    {
-        num: 23,
-        text: "Certifications",
-    },
-    {
-        num: 8,
-        text: "Technologies Mastered",
-    },
-    {
-        num: 500,
-        text: "Code Commits",
-    },
-];
 
 const Stats = () => {
     return (
@@ -39,7 +22,7 @@ const Stats = () => {
                                     delay={2}
                                     className="text-4xl xl:text-6xl font-extrabold"
                                 />
-                                <p className="text-4xl xl:text-6xl font-extrabold">{(item.text == "Years of Experience" || item.text === "Code Commits")? "+" : ""}</p></span>
+                                <p className="text-4xl xl:text-6xl font-extrabold">+</p></span>
                                 <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-white/80`}>{item.text}</p>
                             </div>
                         );
