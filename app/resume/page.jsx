@@ -32,6 +32,7 @@ import {
     publications,
 } from "@/lib/utils";
 
+
 const Resume = () => {
     return (
         <motion.div
@@ -47,7 +48,7 @@ const Resume = () => {
                     defaultValue="about"
                     className="flex flex-col xl:flex-row gap-[60px]"
                 >
-                    <TabsList className="felx flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+                    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
                         <TabsTrigger value="about">About Me</TabsTrigger>
                         <TabsTrigger value="experience">Experience</TabsTrigger>
                         <TabsTrigger value="education">Education</TabsTrigger>
@@ -73,14 +74,14 @@ const Resume = () => {
                                     {experience.description}
                                 </p>
                                 <ScrollArea className="h-[480px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[15px]">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-1 gap-[15px]">
                                         {experience.items.map((item, index) => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[220px] px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
+                                                    className="bg-[#232329] h-[180px] px-0 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
                                                 >
-                                                    <div className="w-full justify-between items-center">
+                                                    {/* <div className="w-full justify-between items-center">
                                                         <div className="flex flex-col justify-center items-center lg:items-start lg:mb-3">
                                                             <span className="text-accent">
                                                                 {item.duration}
@@ -103,6 +104,25 @@ const Resume = () => {
                                                             <p className="text-white/60 lg:h-[60px] lg:text-start">
                                                                 {item.company}
                                                             </p>
+                                                        </div>
+                                                    </div> */}
+
+                                                    <div className="w-full">
+                                                        <div className="w-full flex justify-start items-center">
+                                                            <img className="object-contain h-32 w-32 bg-white rounded-md px-1 mx-5" src={item.logo} alt="company_logo" aria-describedby="logo"/>
+                                                            <div>
+                                                                <h3 className="text-xl w-full min-h-[30px] text-accent text-center lg:text-left font-semibold">
+                                                                    {item.position}
+                                                                </h3>
+                                                                <p>{item.company}</p>
+                                                                <p className="text-center lg:text-left text-white/80">
+                                                                {item.location}
+                                                            </p>
+                                                                <span className="text-white/80">
+                                                                    {item.duration}
+                                                                </span>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </li>
