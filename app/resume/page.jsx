@@ -32,7 +32,6 @@ import {
     publications,
 } from "@/lib/utils";
 
-
 const Resume = () => {
     return (
         <motion.div
@@ -79,7 +78,7 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[180px] px-0 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
+                                                    className="bg-[#232329] h-[250px] lg:h-[180px] px-0 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
                                                 >
                                                     {/* <div className="w-full justify-between items-center">
                                                         <div className="flex flex-col justify-center items-center lg:items-start lg:mb-3">
@@ -107,22 +106,36 @@ const Resume = () => {
                                                         </div>
                                                     </div> */}
 
-                                                    <div className="w-full">
+                                                    <div className="w-full px-2">
                                                         <div className="w-full flex justify-start items-center">
-                                                            <img className="object-contain h-32 w-32 bg-white rounded-md px-1 mx-5" src={item.logo} alt="company_logo" aria-describedby="logo"/>
+                                                            <img
+                                                                className="object-contain h-32 w-32 bg-white rounded-md px-1 mx-5"
+                                                                src={item.logo}
+                                                                alt="company_logo"
+                                                                aria-describedby="logo"
+                                                            />
                                                             <div>
                                                                 <h3 className="text-xl w-full min-h-[30px] text-accent text-center lg:text-left font-semibold">
-                                                                    {item.position}
+                                                                    {
+                                                                        item.position
+                                                                    }
                                                                 </h3>
-                                                                <p>{item.company}</p>
+                                                                <p>
+                                                                    {
+                                                                        item.company
+                                                                    }
+                                                                </p>
                                                                 <p className="text-center lg:text-left text-white/80">
-                                                                {item.location}
-                                                            </p>
+                                                                    {
+                                                                        item.location
+                                                                    }
+                                                                </p>
                                                                 <span className="text-white/80">
-                                                                    {item.duration}
+                                                                    {
+                                                                        item.duration
+                                                                    }
                                                                 </span>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </li>
@@ -150,7 +163,7 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[250px] lg:h-[180px] py-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
+                                                    className="bg-[#232329] h-[300px] lg:h-[180px] py-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 border border-white/20"
                                                 >
                                                     <span className="text-accent">
                                                         {item.duration}
@@ -198,7 +211,8 @@ const Resume = () => {
 
                                                     <div className="flex items-start lg:items-center gap-3 pt-3">
                                                         <p className="text-white/60 w-full">
-                                                            {item.institution}, {item.location}
+                                                            {item.institution},{" "}
+                                                            {item.location}
                                                         </p>
                                                     </div>
                                                 </li>
@@ -232,7 +246,9 @@ const Resume = () => {
                                                             delayDuration={100}
                                                         >
                                                             <Tooltip>
-                                                                <TooltipTrigger className="w-full h-[120px] pt-3 xl:pt-0 bg-[#232329] rounded-xl flex justify-center align-center items-center group border border-white/20 hover:scale-105"> {/*hover:translate-x-1 hover:translate-y-1*/}
+                                                                <TooltipTrigger className="w-full h-[120px] pt-3 xl:pt-0 bg-[#232329] rounded-xl flex justify-center align-center items-center group border border-white/20 hover:scale-105">
+                                                                    {" "}
+                                                                    {/*hover:translate-x-1 hover:translate-y-1*/}
                                                                     <span className="flex flex-col items-center">
                                                                         <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                                                             {
@@ -469,7 +485,7 @@ const Resume = () => {
                                                 return (
                                                     <div
                                                         key={index}
-                                                        className="h-[300px] lg:h-[250px] px-4 bg-[#232329] rounded-xl flex group border border-white/20 lg:justify-between"
+                                                        className="h-[300px] lg:h-[250px] lg:px-4 bg-[#232329] rounded-xl flex group border border-white/20 lg:justify-between"
                                                     >
                                                         <div className="flex flex-col justify-center items-center mx-3">
                                                             <li className=" flex flex-col justify-center  lg:justify-start gap-4 ">
