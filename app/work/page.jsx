@@ -22,11 +22,11 @@ import { Separator } from "@/components/ui/separator";
 
 const Work = () => {
     const [project, setProject] = useState(projects[0]);
-
     const handleSlideChange = (swiper) => {
         const currentIndex = swiper.activeIndex;
         setProject(projects[currentIndex]);
     };
+    
 
     return (
         <motion.div
@@ -42,7 +42,7 @@ const Work = () => {
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             <div className="text-6xl leading-none flex gap-3 font-extrabold text-transparent text-outline">
-                                {project.num}
+                                {projects.indexOf(project) == -1? 1 : projects.indexOf(project)+ 1}
                                 <Separator orientation="vertical" className="w-[2px] h-[60px] text-accent"/>
                             </div>
                             <h2 className="text-4xl text-accent font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize">
