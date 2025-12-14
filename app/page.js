@@ -30,7 +30,7 @@ const Home = () => {
                         <span className="text-xl">
                             <Typewriter
                                 options={{
-                                    strings: ["Software Engineer", "Machine Learning Engineer", "Photographer"],
+                                    strings: ["Senior Software Engineer", "Machine Learning Engineer", "Generative AI Developer", "Photographer"],
                                     autoStart: true,
                                     loop: true,
                                 }}
